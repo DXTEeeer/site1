@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="pt-br" style="overflow: hidden; padding-right: 0px; scroll-behavior: auto;"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>StoryPix</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/instagram-sans-2" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/sf-ui-display" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <meta property="og:title" content="Acesse o aplicativo">
+    <meta property="og:site_name" content="StoryPix">
+    <meta property="og:description" content="Ganhe avaliando stories">
+
+    <script async="" src="js/fbevents.js"></script><script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/jquery.mask.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/zuck.css">
+    <link rel="stylesheet" href="css/snapgram.css">
+
+    <script src="js/zuck.js"></script>
+    <meta name="csrf-token" content="zz3sh0xKIXZKVsisPawo8RxwAfXBQhlmAfUSR2eX">
+    <!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1317967105689966');
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1317967105689966&ev=PageView&noscript=1" /></noscript>
+<!-- End Meta Pixel Code -->        <!-- Livewire Styles --><style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}</style>
+</head>
+
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+
+<body style="margin-top: 0px; overflow-x: hidden" cz-shortcut-listen="true">
+    <div class="flex justify-center flex-col h-[100dvh]">
+        
+<main class="w-full mx-auto flex-1 h-full">
+    <section class="relative flex flex-col items-center justify-start h-full" style="opacity: 1; transform: translateY(0%) translateZ(0px);">
+        <!-- HEADER -->
+        <nav class="w-full mx-auto right-0 z-[997] h-[65px] bg-white p-3 flex items-center justify-between border-b-2">
+            <img src="images/logo.png" alt="StoryPix" class="w-auto h-full">
+            <div class="insta px-5 py-1.5 rounded-lg text-white font-bold font-display text-lg h-full flex items-center justify-center" id="balance">R$ 50,00</div>
+        </nav>
+        <!-- END HEADER -->
+
+        <!-- CONTENT -->
+        
+<div class="pt-[14dvh] mt-[-65px] inset-0 flex px-5">
+    <div class="flex flex-col overflow-hidden justify-center">
+        <div class="grid gap-3">
+            <h1 class="text-3xl inline-block">Seja pago <br> pela suas <br> <span class="text-transparent bg-gradient-to-r bg-clip-text from-purple-600 via-pink-600 to-red-600">opiniões</span>
+            </h1>
+            <p>Assista os todos os stories e transforme opiniões em ganhos no maior lugar que une criatividade e
+                conexão</p>
+        </div>
+        <div id="stories" class="overflow-scroll [&amp;>div]:flex-shrink-0 w-full px-4 mt-3 flex justify-center">
+        </div>
+        <div class="flex justify-center align-center w-full">
+            <button class="w-[90%] h-full relative disabled:opacity-50 transition-all btn-breathe bg-primary font-display rounded-lg px-4 py-3 font-bold text-white z-[2]" id="watch" onclick="watch()">ASSISTIR
+            </button>
+        </div>
+
+
+    </div>
+</div>
+<!-- QUESTION -->
+<div class="p-2 w-full" id="question" style="display: none;">
+    <div class="p-[2.5px] rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-black relative">
+        <div class="bg-white rounded-xl p-2 text-center w-full flex flex-col text-black gap-2">
+            <span>Você tem interesse nesses stories?</span>
+            <div class="flex items-center justify-center w-full rounded-xl gap-2">
+                <button class="w-full relative disabled:opacity-50 transition-all next">
+                    <div class="bg-red-600 font-display rounded-lg w-full px-4 py-3 font-bold text-white z-[2] relative">
+                        <div class="flex items-center justify-center gap-1 whitespace-nowrap"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 10L10 1" stroke="white" stroke-width="2" stroke-linecap="round">
+                                </path>
+                                <path d="M1 1L10 10" stroke="white" stroke-width="2" stroke-linecap="round">
+                                </path>
+                            </svg>Não</div>
+                    </div>
+                </button>
+                <button class="w-full relative disabled:opacity-50 transition-all next">
+                    <div class="bg-green-600 font-display rounded-lg w-full px-4 py-3 font-bold text-white z-[2] relative">
+                        <div class="flex items-center justify-center gap-1 whitespace-nowrap"><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 4.25L4.5 7.75L11 1.25" stroke="white" stroke-linecap="round" stroke-width="2"></path>
+                            </svg>Sim</div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END QUESTION -->
+<div class="relative z-[99999]" id="congratsModal" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-black bg-opacity-70 opacity-100"></div>
+    <div class="fixed inset-0 overflow-y-auto z-[99999]">
+        <div class="flex items-center justify-center min-h-full p-2 text-center">
+            <div class="flex flex-col items-center justify-center w-full max-w-md p-4 overflow-hidden text-left transition-all transform bg-white text-black shadow-xl rounded-xl border border-black/20 opacity-100 scale-100">
+                <div class="flex text-center w-full flex-col items-center justify-center gap-3">
+                    <p class="font-bold text-3xl leading-[1] text-primary my-2">PARABÉNS!</p>
+                    <p class="text-lg font-normal">Você recebeu o acesso gratuito ao StoryPix e ganhou <span class="font-display text-green-700 font-bold">R$�&nbsp;50,00!</span></p>
+                    <p class="text-black">Faça 3 avaliações para aumentar seu saldo e realizar o primeiro <span class="font-bold text-black">SAQUE.</span></p>
+                    <button class="w-full relative disabled:opacity-50 transition-all btn-breathe">
+                        <div id="closeModal" onclick="closeModal()" class="bg-primary font-display rounded-lg w-full px-4 py-3 font-bold text-white z-[2] relative">
+                            COMEÇAR</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- END CONTENT -->
+    </section>
+</main>
+    </div>
+    <script>
+    function closeModal() {
+        $('#congratsModal').animate({
+            opacity: 0,
+        }, 400);
+        setTimeout(() => {
+           document.getElementById('congratsModal').style.display = 'none';
+        }, 470);
+    }
+
+    function watch() {
+        document.querySelector('#stories > div > a').click();
+    }
+</script>
+<link rel="modulepreload" href="https://storypixbr.com/build/assets/stories1-C_79r5Ux.js"><link rel="modulepreload" href="https://storypixbr.com/build/assets/StoriesPool-twRME4vp.js"><script type="module" src="js/stories1-C_79r5Ux.js" data-navigate-track="reload"></script>    <link rel="preload" as="style" href="https://storypixbr.com/build/assets/app-Ci_9Ciu5.css"><link rel="modulepreload" href="https://storypixbr.com/build/assets/app-DUFdA4dA.js"><link rel="stylesheet" href="css/app-Ci_9Ciu5.css" data-navigate-track="reload"><script type="module" src="js/app-DUFdA4dA.js" data-navigate-track="reload"></script>    <script src="js/livewire.min.js" data-csrf="zz3sh0xKIXZKVsisPawo8RxwAfXBQhlmAfUSR2eX" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+
+
+
+
+
+
+
+
+
+</body><!-- contact email pendragoNdev@proton.me --><!-- contact email pendragoNdev@proton.me --><!-- contact email pendragoNdev@proton.me --><!-- contact email pendragoNdev@proton.me --><!-- contact email pendragoNdev@proton.me --><!-- contact email pendragoNdev@proton.me --><!-- contact email pendragoNdev@proton.me --></html>
